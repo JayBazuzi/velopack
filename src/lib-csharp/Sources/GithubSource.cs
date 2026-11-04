@@ -82,7 +82,7 @@ namespace Velopack.Sources
         /// <param name="downloader">
         /// The file downloader used to perform HTTP requests. 
         /// </param>
-        public GithubSource(string repoUrl, string? accessToken, bool prerelease, IFileDownloader? downloader = null)
+        public GithubSource(string repoUrl, string? accessToken = null, bool prerelease = false, IFileDownloader? downloader = null)
             : base(repoUrl, accessToken, prerelease, downloader)
         {
         }

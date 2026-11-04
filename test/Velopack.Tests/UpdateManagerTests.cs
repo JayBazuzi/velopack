@@ -502,7 +502,7 @@ public class UpdateManagerTests
         using var logger = _output.BuildLoggerFor<UpdateManagerTests>();
         using var _1 = TempUtil.GetTempDirectory(out var tempPath);
         var locator = new TestVelopackLocator("MyCoolApp", "1.0.0", tempPath, logger.ToVelopackLogger());
-        var source = new GithubSource("https://github.com/caesay/SquirrelCustomLauncherTestApp", null, false);
+        var source = new GithubSource("https://github.com/caesay/SquirrelCustomLauncherTestApp");
         var um = new UpdateManager(source, null, locator);
         var info = um.CheckForUpdates();
         Assert.NotNull(info);
